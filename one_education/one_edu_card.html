@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .srs_card_pr_tr {
+        padding: 16px;
+        border: 1px solid #eeeef0;
+        box-shadow: 0px 1px 2px 0px #0000000d;
+        border-radius: 8px;
+      }
+      .srs_card_pr_tr:hover{
+        box-shadow: 0px 4px 6px -4px #0000001A;
+
+box-shadow: 0px 10px 15px -3px #0000001A;
+
+      }
+      .srs_card_pr_tr .srs_img_wrapper {
+        position: relative;
+      }
+      .srs_card_pr_tr .srs_img_wrapper img {
+        border-radius: 4px;
+      }
+      .srs_card_pr_tr .srs_img_wrapper .srs_cat {
+        background: #694098;
+        border-radius: 4px;
+        padding: 2px 8px;
+        color: #fff;
+        position: absolute;
+        left: 8px;
+        bottom: 8px;
+      }
+      .srs_card_pr_tr .srs_img_wrapper .srs_cat ul {
+        padding-left: 18px;
+      }
+      .srs_card_pr_tr .srs_content_wrapper {
+        margin-top: 11px;
+      }
+      .srs_card_pr_tr .srs_content_wrapper .srs_card_first_part {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .srs_card_pr_tr .srs_content_wrapper .srs_card_first_part > div {
+        display: flex;
+      }
+      .srs_card_pr_tr .srs_content_wrapper .srs_card_first_part .srs_rating p {
+        color: #64667c;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+      .srs_card_pr_tr .srs_content_wrapper .srs_card_first_part .srs_review p {
+        color: #64667c;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+      .srs_card_pr_tr .srs_content_wrapper .srs_card_sec_part {
+        color: #252847;
+        font-family: "Inter", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin: 8px 0 24px 0;
+      }
+      .srs_card_pr_tr .srs_content_wrapper .srs_card_third_part {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+      .srs_card_pr_tr .srs_content_wrapper .srs_card_third_part div {
+        padding: 2px 8px;
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        background: #eef9f6;
+        border-radius: 50px;
+      }
+      .srs_card_pr_tr .srs_content_wrapper .srs_card_third_part div p {
+        font-family: "Roboto", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #3c8874;
+      }
+      .srs_card_pr_tr .srs_content_wrapper .srs_card_fourth_part {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #c9c9d1;
+        border-bottom-style: dashed;
+      }
+      .srs_card_pr_tr .srs_content_wrapper .srs_card_fourth_part div {
+        padding: 2px 8px;
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+      .srs_card_pr_tr .srs_content_wrapper .srs_card_fourth_part div p {
+        font-family: "Roboto", sans-serif;
+
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #7c7e91;
+      }
+      .srs_card_pr_tr .srs_content_wrapper .srs_card_fifth_part {
+        padding-top: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .srs_card_pr_tr .srs_content_wrapper .srs_card_fifth_part .srs_price {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .srs_card_pr_tr .srs_content_wrapper .srs_card_fifth_part .srs_price h5 {
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #252847;
+      }
+      .srs_card_pr_tr
+        .srs_content_wrapper
+        .srs_card_fifth_part
+        .srs_price
+        h5
+        span {
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+      .srs_card_pr_tr .srs_content_wrapper .srs_card_fifth_part .srs_price del {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #f51500;
+      }
+      .srs_card_pr_tr .srs_content_wrapper .srs_card_fifth_part .srs_btn a{
+font-family: "Roboto", sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+color:#EE4166;
+text-decoration: none;
+padding: 12px 0px;
+background: transparent;
+transition: all .3s ease-out;
+      }
+      .srs_card_pr_tr:hover .srs_content_wrapper .srs_card_fifth_part .srs_btn a{
+        padding: 12px 16px;
+        background: #EE4166;
+        color: #fff;
+        border-radius: 
+50px;
+      }
+      .srs_card_pr_tr .srs_content_wrapper .srs_card_fifth_part .srs_btn a i{
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="srs_card_pr_tr">
+      <div class="srs_img_wrapper">
+        <img
+          src="https://www.oneeducation.org.uk/wp-content/uploads/2024/02/Rectangle-3-1.webp"
+          alt=""
+        />
+        <div class="srs_cat">
+          <ul>
+            <li>Business</li>
+          </ul>
+        </div>
+      </div>
+      <div class="srs_content_wrapper">
+        <div class="srs_card_first_part">
+          <div>
+            <div class="srs_rating">
+              <p>4.5</p>
+              <i aria-hidden="true" class="fas fa-star"></i>
+            </div>
+            <div class="srs_review">
+              <p>(1326 Reviews)</p>
+            </div>
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+          >
+            <rect width="32" height="32" rx="16" fill="#FDECF0"></rect>
+            <path
+              d="M14 22.6667H18C21.3333 22.6667 22.6667 21.3334 22.6667 18V14C22.6667 10.6667 21.3333 9.33337 18 9.33337H14C10.6667 9.33337 9.33334 10.6667 9.33334 14V18C9.33334 21.3334 10.6667 22.6667 14 22.6667Z"
+              stroke="#EE4166"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M19.3333 9.62671V16.28C19.3333 17.5934 18.3933 18.1067 17.24 17.4134L16.36 16.8867C16.16 16.7667 15.84 16.7667 15.64 16.8867L14.76 17.4134C13.6067 18.1 12.6667 17.5934 12.6667 16.28V9.62671"
+              stroke="#EE4166"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M14 22.6667H18C21.3333 22.6667 22.6667 21.3334 22.6667 18V14C22.6667 10.6667 21.3333 9.33337 18 9.33337H14C10.6667 9.33337 9.33334 10.6667 9.33334 14V18C9.33334 21.3334 10.6667 22.6667 14 22.6667Z"
+              stroke="#EE4166"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M19.3333 9.62671V16.28C19.3333 17.5934 18.3933 18.1067 17.24 17.4134L16.36 16.8867C16.16 16.7667 15.84 16.7667 15.64 16.8867L14.76 17.4134C13.6067 18.1 12.6667 17.5934 12.6667 16.28V9.62671"
+              stroke="#EE4166"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </div>
+        <div class="srs_card_sec_part">
+          <h5>Making a Start with Business Improvement</h5>
+        </div>
+        <div class="srs_card_third_part">
+          <div>
+            <i aria-hidden="true" class="fas fa-check"></i>
+            <p>CPD</p>
+          </div>
+          <div>
+            <i aria-hidden="true" class="fas fa-check"></i>
+            <p>IOSH</p>
+          </div>
+          <div>
+            <i aria-hidden="true" class="fas fa-check"></i>
+            <p>RoSPA</p>
+          </div>
+        </div>
+        <div class="srs_card_fourth_part">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M1.75 9V3.5C1.75 1.5 2.25 1 4.25 1H7.75C9.75 1 10.25 1.5 10.25 3.5V8.5C10.25 8.57 10.25 8.64 10.245 8.71"
+                stroke="#7C7E91"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M3.175 7.5H10.25V9.25C10.25 10.215 9.465 11 8.5 11H3.5C2.535 11 1.75 10.215 1.75 9.25V8.925C1.75 8.14 2.39 7.5 3.175 7.5Z"
+                stroke="#7C7E91"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M4 3.5H8"
+                stroke="#7C7E91"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M4 5.25H6.5"
+                stroke="#7C7E91"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <p>Modules 25</p>
+          </div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M11 6C11 8.76 8.76 11 6 11C3.24 11 1 8.76 1 6C1 3.24 3.24 1 6 1C8.76 1 11 3.24 11 6Z"
+                stroke="#7C7E91"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M7.855 7.59L6.305 6.665C6.035 6.505 5.815 6.12 5.815 5.805V3.755"
+                stroke="#7C7E91"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <p>19h 30m</p>
+          </div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M6 6C7.38071 6 8.5 4.88071 8.5 3.5C8.5 2.11929 7.38071 1 6 1C4.61929 1 3.5 2.11929 3.5 3.5C3.5 4.88071 4.61929 6 6 6Z"
+                stroke="#7C7E91"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M10.295 11C10.295 9.065 8.37002 7.5 6.00002 7.5C3.63002 7.5 1.70502 9.065 1.70502 11"
+                stroke="#7C7E91"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <p>Students 2k+</p>
+          </div>
+        </div>
+        <div class="srs_card_fifth_part">
+          <div class="srs_price">
+            <h5>
+              £25
+              <span>+VAT</span>
+            </h5>
+            <del> £250 </del>
+          </div>
+          <div class="srs_btn">
+            <a href="#"
+              >View Course <i aria-hidden="true" class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
